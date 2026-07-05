@@ -1,16 +1,12 @@
-def f(n):
-    n = bin(n)[2:]
-    if n.count('1') %2 == 0:
-        n += '0'
-        n = '10' + n[2:]
+for N  in range(1,100000):
+    R = bin(N)[2:]
+    if R.count('1') % 2 == 0:
+        R = '10'+ R[2:] + '0'
     else:
-        n += '1'
-        n = '11' + n[2:]
-    return int(n, 2)
-
-i = 0
-while True:
-    if f(i) >= 16:
-        print(i)
+        R = '11' + R[2:] + '1'
+    R = int(R,2)
+    if R >= 16:
+        print(N)
         break
-    i+=1
+
+# print("8")
