@@ -9,7 +9,7 @@ for val in product(letter, repeat=4):
     for g in "ПТН":
         val = val.replace(g, ".")
 
-    if val.count('**') == 0 and val.count('..') == 0:
+    if val.count('**') == 0 and  val.count('*') == 2 and val.count('..') == 0 and val.count('.') == 2:
         cnt += 1
 print(cnt)
 
